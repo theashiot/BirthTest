@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="http://www.webglearth.com/v2/api.js"></script>
+    <script>
+      //var markers [];
+	 // markers[0] = 
+	  
+	  function initialize() {
+        
+		var earth = new WE.map('earth_div');
+        
+        WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
+
+        var nico = WE.marker([50.08, 8.24]).addTo(earth);
+        nico.bindPopup("<img src='http://i890.photobucket.com/albums/ac110/biancamoura__/Nico1.jpg' height='110px' width='150px' /><h3>Nico</h3>", {maxWidth: 150, closeButton: true}); //.openPopup();
+
+		var kimi = WE.marker([60.205556, 24.655556]).addTo(earth);
+        kimi.bindPopup("<img src='http://i1159.photobucket.com/albums/p637/joannademontecristo/Kimi%20Raikkonen/kimi68_zps2041df4c.jpg' height='250px' width='150px' /><h1>Kimi</h1>", {maxWidth: 150, closeButton: true}); //.openPopup();
+
+		var seb = WE.marker([49.643056, 8.638889]).addTo(earth);
+        seb.bindPopup("<img src='http://i103.photobucket.com/albums/m129/tuwloh/pembalap%20F1/SebastianVettel-F1.jpg' height='200px' width='150px' /><h1>Sebastien</h1>", {maxWidth: 150, closeButton: true}); //.openPopup();
+
+		var em = WE.marker([51.751944, -1.257778]).addTo(earth);
+        em.bindPopup("<img src='http://i559.photobucket.com/albums/ss40/iluvtwilight32123/Emma%20Watson/emma-watson91.jpg' height='250px' width='150px' /><h1>Emma</h1>", {maxWidth: 150, closeButton: true}); //.openPopup();
+
+		var dan = WE.marker([54.75, 55.966667]).addTo(earth);
+        dan.bindPopup("<img src='http://i774.photobucket.com/albums/yy28/Vermidian/Roleplaying/Daniil/tumblr_lsk86kiKgv1qkvrpzo5_500icon.jpg' height='250px' width='150px' /><h1>Dan</h1>", {maxWidth: 150, closeButton: true}); //.openPopup();
+
+		var hulk = WE.marker([51.835, 6.245278]).addTo(earth);
+        hulk.bindPopup("<img src='http://i774.photobucket.com/albums/yy28/Vermidian/Roleplaying/Daniil/tumblr_lsk86kiKgv1qkvrpzo5_500icon.jpg' height='250px' width='150px' /><h1>Dan</h1>", {maxWidth: 150, closeButton: true}); //.openPopup();
+		
+		var mark = WE.marker([-35.353333, 149.234167]).addTo(earth);
+        mark.bindPopup("<img src='http://i778.photobucket.com/albums/yy62/mika-packers/Decorated%20images/red%20bull%20racing%20and%20mark%20webber/markwebber3.jpg' height='250px' width='150px' /><h1>Mark</h1>", {maxWidth: 150, closeButton: true}); //.openPopup();
+ 
+
+        var markerCustom = WE.marker([50, -9], '/img/logo-webglearth-white-100.png', 100, 24).addTo(earth);
+
+        earth.setView([0, 0], 2);
+		
+
+      }
+	  
+	  
+    </script>
+    <style>
+      html, body{padding: 0; margin: 0; background-image: url('stars3.jpg');}
+      #earth_div{top: 0; right: 0; bottom: 0; left: 0; position: absolute !important;}
+    </style>
+    <title>WebGL Earth API: Markers</title>
+  </head>
+  <body onload="initialize()">
+    <h2 style="color:white; align:center;">Happy Birthday Emma From OSS Family</h2>
+	<h3 style="color:white">Click on the markers to see who we are</h3>
+	<h3 style="color:white">Scroll to zoom</h3>
+	
+	<div id="earth_div"></div>
+  </body>
+</html>
